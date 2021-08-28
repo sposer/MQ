@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <data>
+        <variable
+            name="bean"
+            type="top.heue.mq.bean.LoginBean" />
+    </data>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="8dp"
+        android:orientation="vertical">
+
+        <ImageView
+            android:src="@drawable/ic_launcher_round"
+            android:layout_width="72dp"
+            android:layout_height="72dp"
+            android:layout_gravity="center_horizontal"
+            android:scaleType="fitCenter"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:gravity="center_vertical"
+            android:hint="QQ号"
+            android:inputType="number"
+            android:lines="1"
+            android:text="@={bean.uid}"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="2dp"
+            android:gravity="center_vertical"
+            android:hint="密码"
+            android:text="@={bean.pwd}"
+            android:inputType="textPassword"
+            android:lines="1"
+            android:paddingStart="8dp"
+            android:paddingEnd="8dp" />
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="24dp"
+            android:onClick="@{() -> bean.login()}"
+            android:layout_marginEnd="12dp"
+            android:text="登录" />
+
+    </LinearLayout>
+
+</layout>
