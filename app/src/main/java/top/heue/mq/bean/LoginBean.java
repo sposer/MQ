@@ -15,8 +15,8 @@ import top.heue.mq.service.MQService;
 import top.heue.utils.log.L;
 
 public class LoginBean {
-    public String uid = "3313849356";
-    public String pwd = "Xt323104..";
+    public String uid = "";
+    public String pwd = "";
 
     public BaseActivity activity;
 
